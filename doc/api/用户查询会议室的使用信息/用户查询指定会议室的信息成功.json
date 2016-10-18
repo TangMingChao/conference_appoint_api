@@ -1,0 +1,44 @@
+{
+  "resource": "用户查询会议室的使用信息",
+  "http_method": "GET",
+  "route": "/meeting_room_infos/:id",
+  "description": "用户查询指定会议室的信息成功",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/meeting_room_infos/1",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"appoint_at\": \"2017-09-24T14:39:08.000+08:00\",\n  \"meeting_room_id\": 1,\n  \"session\": \"morning\",\n  \"state\": \"checking\",\n  \"appoint_name\": \"appoint_name\",\n  \"appoint_phone\": \"appoint_phone\",\n  \"created_at\": \"2016-10-18T09:46:28.290+08:00\",\n  \"updated_at\": \"2016-10-18T09:46:28.290+08:00\",\n  \"url\": \"http://example.org/meeting_room_infos/1.json\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"59ffc0138b8868cdba1ab1d02dd61aec\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "5310e76a-5848-44ac-bf91-a89a31206100",
+        "X-Runtime": "0.009811",
+        "Content-Length": "317"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//meeting_room_infos/1\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

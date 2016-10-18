@@ -1,0 +1,70 @@
+{
+  "resource": "管理员登录",
+  "http_method": "POST",
+  "route": "/administrators/sign_in",
+  "description": "管理员登录成功",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "user",
+      "name": "phone",
+      "description": "登录的邮箱号"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password",
+      "description": "登录密码"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "phone",
+      "description": "电话号码"
+    },
+    {
+      "name": "authentication_token",
+      "description": "鉴权Token"
+    },
+    {
+      "name": "created_at",
+      "description": "创建时间"
+    },
+    {
+      "name": "updated_at",
+      "description": "更新时间"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/administrators/sign_in",
+      "request_body": "user[phone]&user[password]=abcd1234",
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": "{\n  \"error\": \"You need to sign in or sign up before continuing.\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "e2edcc58-ed01-4561-b528-52b40ed938db",
+        "X-Runtime": "0.527105",
+        "Content-Length": "61"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//administrators/sign_in\" -d 'user[phone]&user[password]=abcd1234' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

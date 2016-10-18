@@ -1,0 +1,57 @@
+{
+  "resource": "管理员对预约订单的审核",
+  "http_method": "GET",
+  "route": "/admin/orders",
+  "description": "管理员获取预约订单列表成功",
+  "explanation": null,
+  "parameters": [
+    {
+      "require": false,
+      "name": "page",
+      "description": "当前页"
+    },
+    {
+      "require": false,
+      "name": "per_page",
+      "description": "每页的数量"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/admin/orders?page=1&per_page=15",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "X-Administrator-Token": "qwertyuiop2",
+        "X-Administrator-Phone": "13813813811",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "page": "1",
+        "per_page": "15"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"appoint_name\": \"appoint_name\",\n    \"appoint_phone\": \"appoint_phone\",\n    \"join_number\": 4,\n    \"appoint_at\": \"2017-09-24T14:39:08.000+08:00\",\n    \"layout\": \"rectangle\",\n    \"meeting_room_id\": 1,\n    \"is_projector\": true,\n    \"is_meeting_phone\": true,\n    \"created_at\": \"2016-10-18T09:46:27.446+08:00\",\n    \"updated_at\": \"2016-10-18T09:46:27.446+08:00\",\n    \"url\": \"http://example.org/admin/orders/1.json\"\n  },\n  {\n    \"id\": 2,\n    \"appoint_name\": \"appoint_name\",\n    \"appoint_phone\": \"appoint_phone\",\n    \"join_number\": 4,\n    \"appoint_at\": \"2017-09-24T14:39:08.000+08:00\",\n    \"layout\": \"rectangle\",\n    \"meeting_room_id\": 1,\n    \"is_projector\": true,\n    \"is_meeting_phone\": true,\n    \"created_at\": \"2016-10-18T09:46:27.451+08:00\",\n    \"updated_at\": \"2016-10-18T09:46:27.451+08:00\",\n    \"url\": \"http://example.org/admin/orders/2.json\"\n  },\n  {\n    \"id\": 3,\n    \"appoint_name\": \"appoint_name\",\n    \"appoint_phone\": \"appoint_phone\",\n    \"join_number\": 4,\n    \"appoint_at\": \"2017-09-24T14:39:08.000+08:00\",\n    \"layout\": \"rectangle\",\n    \"meeting_room_id\": 1,\n    \"is_projector\": true,\n    \"is_meeting_phone\": true,\n    \"created_at\": \"2016-10-18T09:46:27.455+08:00\",\n    \"updated_at\": \"2016-10-18T09:46:27.455+08:00\",\n    \"url\": \"http://example.org/admin/orders/3.json\"\n  }\n]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"53fccfd053e655c3c7eff4972375d44c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "583e7163-24cf-4cd8-8157-f806ec321ad6",
+        "X-Runtime": "0.062719",
+        "Content-Length": "1063"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//admin/orders?page=1&per_page=15\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Administrator-Token: qwertyuiop2\" \\\n\t-H \"X-Administrator-Phone: 13813813811\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

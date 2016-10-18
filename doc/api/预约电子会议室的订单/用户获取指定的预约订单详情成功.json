@@ -1,0 +1,46 @@
+{
+  "resource": "预约电子会议室的订单",
+  "http_method": "GET",
+  "route": "/orders/:id",
+  "description": "用户获取指定的预约订单详情成功",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/orders/1",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "X-User-Token": "qwertyuiop2",
+        "X-User-Email": "13813813811@163.com",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"appoint_name\": \"appoint_name\",\n  \"appoint_phone\": \"appoint_phone\",\n  \"join_number\": 3,\n  \"appoint_at\": \"2017-09-24T14:39:08.000+08:00\",\n  \"session\": \"morning\",\n  \"state\": \"checking\",\n  \"layout\": \"rectangle\",\n  \"meeting_room_id\": 1,\n  \"is_projector\": true,\n  \"is_meeting_phone\": true,\n  \"created_at\": \"2016-10-18T09:46:28.465+08:00\",\n  \"updated_at\": \"2016-10-18T09:46:28.465+08:00\",\n  \"url\": \"http://example.org/orders/1.json\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"47cc94996ad45b037d2fd818d4540357\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b9db0c93-f8e3-47db-aeca-6aae031b05d5",
+        "X-Runtime": "0.014477",
+        "Content-Length": "386"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//orders/1\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Token: qwertyuiop2\" \\\n\t-H \"X-User-Email: 13813813811@163.com\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

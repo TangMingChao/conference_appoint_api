@@ -1,0 +1,77 @@
+{
+  "resource": "用户登录",
+  "http_method": "POST",
+  "route": "/users/sign_in",
+  "description": "用户登录成功",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "user",
+      "name": "email",
+      "description": "登录的邮箱号"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password",
+      "description": "登录密码"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "id",
+      "description": "用户ID"
+    },
+    {
+      "name": "email",
+      "description": "邮箱"
+    },
+    {
+      "name": "authentication_token",
+      "description": "鉴权Token"
+    },
+    {
+      "name": "created_at",
+      "description": "创建时间"
+    },
+    {
+      "name": "updated_at",
+      "description": "更新时间"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users/sign_in",
+      "request_body": "user[email]=13813813811%40163.com&user[password]=abcd1234",
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 1,\n  \"authentication_token\": \"qwertyuiop2\",\n  \"email\": \"13813813811@163.com\",\n  \"created_at\": \"2016-10-18T09:46:27.694+08:00\",\n  \"updated_at\": \"2016-10-18T09:46:27.712+08:00\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "/",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"036728cc877c6f60efe15cdf87224ba0\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "_conference_appoint_api_session=VkhNOFN1S2NwczRFYnpCb1Y4dXA3bkJ0cVNPM1RXTWhBUGE2MTNCWWJnYmpiaUpMczlmd3JYMkNTZEFyVWh3aUUveW5aKzZrTjMrR3Z4SjVwdk5XOFhXTjZ4SEVHdGpmVFZFdVp3NmVNZExETTdFMGhtUTV4U2wyeThzREZPb0cvOTZaSVQ4eW9aZWJBeXpYR0F4QmtRPT0tLThUbVdEYVRYbjdzcmNWOWsrd3lyTGc9PQ%3D%3D--c00406b6d4bcdaa5d130a4bd562b681eaf9b4909; path=/; HttpOnly",
+        "X-Request-Id": "8e0a2330-1d3e-4205-92c6-a3233290b670",
+        "X-Runtime": "0.024962",
+        "Content-Length": "165"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//users/sign_in\" -d 'user[email]=13813813811%40163.com&user[password]=abcd1234' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

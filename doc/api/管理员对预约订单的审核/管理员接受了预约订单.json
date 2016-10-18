@@ -1,0 +1,53 @@
+{
+  "resource": "管理员对预约订单的审核",
+  "http_method": "POST",
+  "route": "/admin/orders/:id/accept",
+  "description": "管理员接受了预约订单",
+  "explanation": null,
+  "parameters": [
+    {
+      "require": true,
+      "scope": "order",
+      "name": "state",
+      "description": "预约订单的状态"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/admin/orders/1/accept",
+      "request_body": "order[state]=2",
+      "request_headers": {
+        "Accept": "application/json",
+        "X-Administrator-Token": "qwertyuiop2",
+        "X-Administrator-Phone": "13813813811",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"appoint_name\": \"appoint_name\",\n  \"appoint_phone\": \"appoint_phone\",\n  \"join_number\": 4,\n  \"session\": \"morning\",\n  \"state\": \"success\",\n  \"meeting_room_id\": 1,\n  \"created_at\": \"2016-10-18T09:46:27.591+08:00\",\n  \"updated_at\": \"2016-10-18T09:46:27.591+08:00\",\n  \"layout\": \"rectangle\",\n  \"user_id\": 1,\n  \"appoint_at\": \"2017-09-24T14:39:08.000+08:00\",\n  \"is_projector\": true,\n  \"is_meeting_phone\": true,\n  \"query_at\": null,\n  \"sign\": null\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/orders/1",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"1c244863167435fc1b58a2968a59251d\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a22735ad-6e0f-4ba2-bafa-bb4cf4d0c554",
+        "X-Runtime": "0.028970",
+        "Content-Length": "384"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//admin/orders/1/accept\" -d 'order[state]=2' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Administrator-Token: qwertyuiop2\" \\\n\t-H \"X-Administrator-Phone: 13813813811\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
