@@ -22,10 +22,11 @@ resource "预约电子会议室的订单" do
     	parameter :appoint_at, "预约会议日期", require: true, scope: :order
     	parameter :session, "会议室开放时间", require: true, scope: :order
     	parameter :state, "预约订单的状态", require: true, scope: :order
-        parameter :room_layout, "预约会议室的布局", require: true, scope: :order
+      parameter :room_layout, "预约会议室的布局", require: true, scope: :order
    	 	parameter :is_projector, "预约是否需要投影仪", require: true, scope: :order
     	parameter :is_meeting_phone, "预约是否需要会议电话", require: true, scope: :order
     	parameter :meeting_room_id, "预约的会议室", require: true, scope: :order
+      parameter :sign, "预约的会议室", require: true, scope: :order
     					#########
 
    	 	let(:appoint_name) {order_attrs[:appoint_name]}
@@ -38,11 +39,12 @@ resource "预约电子会议室的订单" do
     	let(:is_projector) {order_attrs[:is_projector]}
     	let(:is_meeting_phone) {order_attrs[:is_meeting_phone]}
     	let(:meeting_room_id) {order_attrs[:meeting_room_id]}
+      let(:sign) {order_attrs[:sign]}
 
 
     ################################# 
  
-  	example "用户创建一个新的预约订单成功" do
+  	example "用户创建新的预约订单成功" do
   		do_request
   		puts response_body
       expect(status).to eq(201)
@@ -87,7 +89,7 @@ resource "预约电子会议室的订单" do
 
     before do
       @user = create(:user)
-      @orders = create_list(:order,1 , join_number: 3)
+      @orders = create_list(:order,5 , join_number: 3)
     end
 
   	let(:id) { @orders.first.id }

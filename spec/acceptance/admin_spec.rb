@@ -70,7 +70,7 @@ resource "管理员对预约订单的审核" do
   	example "管理员接受了预约订单" do
   		do_request
   		puts response_body
-      # expect(status).to eq(200)
+      expect(status).to eq(200)
       
   	end
   	
@@ -95,7 +95,7 @@ resource "管理员对预约订单的审核" do
   	example "管理员拒绝了预约订单成功" do
   		do_request
   		puts response_body
-      # expect(status).to eq(200)
+      expect(status).to eq(200)
   	end
   	
    end

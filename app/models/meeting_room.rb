@@ -14,13 +14,12 @@
 
 class MeetingRoom < ApplicationRecord
   include AASM
-	has_many :orders,dependent: :destroy
+  has_many :orders
+  # has_many :groups, class_name: "Order", dependent: :destroy
 	validates :title,:description,:max_number,presence: true
 	# validates :title,uniqueness:true
-    
 
  ###########################   update_state   ##################
-
  enum state:{
 
   unused: 0 ,
@@ -44,8 +43,5 @@ class MeetingRoom < ApplicationRecord
     event :unuse do
       transitions :from => [:checking,:used] , :to => :unused
     end
-  end
-  
- 
-  
+  end  
 end

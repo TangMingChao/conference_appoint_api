@@ -47,7 +47,7 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:appoint_name, :appoint_phone, :join_number,:appoint_at,
-        :layout,:is_projector,:is_meeting_phone,:meeting_room_id)
+      params.require(:order).permit(:appoint_name, :appoint_phone, :join_number,:appoint_at,:session,
+        :layout,:is_projector,:is_meeting_phone,:meeting_room_id,:sign)
     end
 end

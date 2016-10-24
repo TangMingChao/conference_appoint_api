@@ -8,7 +8,9 @@ class MeetingRoomsController < ApplicationController
   respond_to :json
 
   def index
-    @meeting_rooms = MeetingRoom.all
+    page = params[:page] || 1
+    per_page = params[:per_page] || 6
+    @meeting_rooms = MeetingRoom.all.paginate(page: page, per_page: per_page)
     respond_with(@meeting_rooms)
   end
 

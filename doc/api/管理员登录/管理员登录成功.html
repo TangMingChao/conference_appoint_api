@@ -123,7 +123,7 @@ table th, table td {
             <tbody>
               <tr>
                 <td class="required">
-                    <span class="name">user[phone]</span>
+                    <span class="name">administrator[phone]</span>
                 </td>
                 <td>
                   <span class="description">登录的邮箱号</span>
@@ -131,7 +131,7 @@ table th, table td {
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">user[password]</span>
+                    <span class="name">administrator[password]</span>
                 </td>
                 <td>
                   <span class="description">登录密码</span>
@@ -197,10 +197,10 @@ Cookie: </pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">user[phone]&user[password]=abcd1234</pre>
+            <pre class="request body">administrator[phone]=13813813811&administrator[password]=abcd1234</pre>
 
             <h4>cURL</h4>
-            <pre class="request curl">curl &quot;http://smart-life.com//administrators/sign_in&quot; -d &#39;user[phone]&amp;user[password]=abcd1234&#39; -X POST \
+            <pre class="request curl">curl &quot;http://smart-life.com//administrators/sign_in&quot; -d &#39;administrator[phone]=13813813811&amp;administrator[password]=abcd1234&#39; -X POST \
 	-H &quot;Accept: application/json&quot; \
 	-H &quot;Host: example.org&quot; \
 	-H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
@@ -211,16 +211,24 @@ Cookie: </pre>
               <pre class="response headers">X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
+Location: /
 Content-Type: application/json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: e2edcc58-ed01-4561-b528-52b40ed938db
-X-Runtime: 0.527105
-Content-Length: 61</pre>
+ETag: W/&quot;0909c692488f4cf4d42b981d045c30fd&quot;
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _conference_appoint_api_session=QktwL0FqYnNaTjFYRkNHb01FeXI2T2VFRFlWQ2tUMVd0SE1lMTNNbE9rZTMzREkrdlRmcXB4QXlaZzUwK0NyS2wxTkM0cWY5ZUM5eDhWUFowT0Fpb2R3d2Rtd3lkK3I1OFlDZWxGZkZ6VjRyVVNzdnBCK3BmRTgvOURUK2UveE1rMktoelIxaHhGY1NpTHZlTm1sRDFTUWpzWmdybTVXa2xlL2V5R0NaUHU4PS0tYjZteE9KWXpEYmxwZXBhbXBYK0JXQT09--e4b2ad2335b902b4bb291df772cc388777508742; path=/; HttpOnly
+X-Request-Id: 78a1ccf1-3abd-41dd-802d-2d4e4820a245
+X-Runtime: 0.014554
+Content-Length: 168</pre>
             <h4>Status</h4>
-            <pre class="response status">401 Unauthorized</pre>
+            <pre class="response status">201 Created</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;error&quot;: &quot;You need to sign in or sign up before continuing.&quot;
+  &quot;id&quot;: 1,
+  &quot;authentication_token&quot;: &quot;qwertyuiop2&quot;,
+  &quot;email&quot;: &quot;&quot;,
+  &quot;phone&quot;: &quot;13813813811&quot;,
+  &quot;created_at&quot;: &quot;2016-10-24T10:36:56.686+08:00&quot;,
+  &quot;updated_at&quot;: &quot;2016-10-24T10:36:56.696+08:00&quot;
 }</pre>
       </div>
     </div>

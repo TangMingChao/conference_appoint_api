@@ -1,1 +1,0 @@
-json.array! @meeting_room_infos, partial: 'meeting_room_infos/meeting_room_info', as: :meeting_room_info

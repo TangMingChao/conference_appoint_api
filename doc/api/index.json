@@ -1,20 +1,20 @@
 {
   "resources": [
     {
-      "name": "用户查询会议室的使用信息",
+      "name": "会议室的使用信息",
       "examples": [
         {
-          "description": "用户查询会议室的使用情况成功",
-          "link": "用户查询会议室的使用信息/用户查询会议室的使用情况成功.json",
+          "description": "用户查询会议室一周的使用情况成功",
+          "link": "会议室的使用信息/用户查询会议室一周的使用情况成功.json",
           "groups": "all",
-          "route": "/meeting_room_infos",
+          "route": "/meeting_room_orders",
           "method": "get"
         },
         {
-          "description": "用户查询指定会议室的信息成功",
-          "link": "用户查询会议室的使用信息/用户查询指定会议室的信息成功.json",
+          "description": "用户查询指定会议室的使用详情成功",
+          "link": "会议室的使用信息/用户查询指定会议室的使用详情成功.json",
           "groups": "all",
-          "route": "/meeting_room_infos/:id",
+          "route": "/meeting_room_orders/:id",
           "method": "get"
         }
       ]
@@ -32,18 +32,18 @@
       ]
     },
     {
-      "name": "电子会议室的资料",
+      "name": "电子会议室的信息及使用情况",
       "examples": [
         {
-          "description": "查询会议室的列表成功",
-          "link": "电子会议室的资料/查询会议室的列表成功.json",
+          "description": "首页查询会议室的列表成功",
+          "link": "电子会议室的信息及使用情况/首页查询会议室的列表成功.json",
           "groups": "all",
           "route": "/meeting_rooms",
           "method": "get"
         },
         {
-          "description": "查询指定会议室的详情成功",
-          "link": "电子会议室的资料/查询指定会议室的详情成功.json",
+          "description": "首页查询指定会议室的详情成功",
+          "link": "电子会议室的信息及使用情况/首页查询指定会议室的详情成功.json",
           "groups": "all",
           "route": "meeting_rooms/:id",
           "method": "get"
@@ -99,8 +99,8 @@
       "name": "预约电子会议室的订单",
       "examples": [
         {
-          "description": "用户创建一个新的预约订单成功",
-          "link": "预约电子会议室的订单/用户创建一个新的预约订单成功.json",
+          "description": "用户创建新的预约订单成功",
+          "link": "预约电子会议室的订单/用户创建新的预约订单成功.json",
           "groups": "all",
           "route": "/orders",
           "method": "post"

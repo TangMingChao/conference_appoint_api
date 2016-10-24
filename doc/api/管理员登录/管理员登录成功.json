@@ -7,13 +7,13 @@
   "parameters": [
     {
       "required": true,
-      "scope": "user",
+      "scope": "administrator",
       "name": "phone",
       "description": "登录的邮箱号"
     },
     {
       "required": true,
-      "scope": "user",
+      "scope": "administrator",
       "name": "password",
       "description": "登录密码"
     }
@@ -40,7 +40,7 @@
     {
       "request_method": "POST",
       "request_path": "/administrators/sign_in",
-      "request_body": "user[phone]&user[password]=abcd1234",
+      "request_body": "administrator[phone]=13813813811&administrator[password]=abcd1234",
       "request_headers": {
         "Accept": "application/json",
         "Host": "example.org",
@@ -50,21 +50,24 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
-      "response_status": 401,
-      "response_status_text": "Unauthorized",
-      "response_body": "{\n  \"error\": \"You need to sign in or sign up before continuing.\"\n}",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 1,\n  \"authentication_token\": \"qwertyuiop2\",\n  \"email\": \"\",\n  \"phone\": \"13813813811\",\n  \"created_at\": \"2016-10-24T10:36:56.686+08:00\",\n  \"updated_at\": \"2016-10-24T10:36:56.696+08:00\"\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
+        "Location": "/",
         "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-cache",
-        "X-Request-Id": "e2edcc58-ed01-4561-b528-52b40ed938db",
-        "X-Runtime": "0.527105",
-        "Content-Length": "61"
+        "ETag": "W/\"0909c692488f4cf4d42b981d045c30fd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "_conference_appoint_api_session=QktwL0FqYnNaTjFYRkNHb01FeXI2T2VFRFlWQ2tUMVd0SE1lMTNNbE9rZTMzREkrdlRmcXB4QXlaZzUwK0NyS2wxTkM0cWY5ZUM5eDhWUFowT0Fpb2R3d2Rtd3lkK3I1OFlDZWxGZkZ6VjRyVVNzdnBCK3BmRTgvOURUK2UveE1rMktoelIxaHhGY1NpTHZlTm1sRDFTUWpzWmdybTVXa2xlL2V5R0NaUHU4PS0tYjZteE9KWXpEYmxwZXBhbXBYK0JXQT09--e4b2ad2335b902b4bb291df772cc388777508742; path=/; HttpOnly",
+        "X-Request-Id": "78a1ccf1-3abd-41dd-802d-2d4e4820a245",
+        "X-Runtime": "0.014554",
+        "Content-Length": "168"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://smart-life.com//administrators/sign_in\" -d 'user[phone]&user[password]=abcd1234' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://smart-life.com//administrators/sign_in\" -d 'administrator[phone]=13813813811&administrator[password]=abcd1234' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

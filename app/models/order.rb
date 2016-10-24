@@ -108,39 +108,15 @@ class Order < ApplicationRecord
       self.refuse
       # self.meeting_room.unuse
   end 
- 
-  def room_state_alias
-    I18n.t :"meeting_room_state.#{self.meeting_room.state}"
-  end
-
-  # def times
-  #   between_times(query_at - 2.day, query_at + 5.day)
+ ################## time_range ####################
+  # def time_range
+  #   # between_times(self.query_at - 2.day, self.query_at + 5.day)
+  #   if self.query_at.present?
+  #     ((self.query_at - 2.day) .. (self.query_at + 5.day))
+  #   else
+  #     ((Time.now.midnight) .. (Time.now.midnight + 6.day))
+  #   end
   # end
-
-  # def week_order
-  #    self.where(appoint_at: (query_at - 2.day) .. (query_at + 5.day))
-  # end
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
 
 

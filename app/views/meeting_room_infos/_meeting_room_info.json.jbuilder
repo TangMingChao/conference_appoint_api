@@ -1,2 +1,0 @@
-json.extract! meeting_room_info, :id,:appoint_at,:meeting_room_id,:session, :state, :appoint_name, :appoint_phone, :created_at, :updated_at
-json.url meeting_room_info_url(meeting_room_info, format: :json)

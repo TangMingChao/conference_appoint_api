@@ -27,10 +27,10 @@ FactoryGirl.define do
     appoint_name "appoint_name"
     appoint_phone "appoint_phone"
     join_number 1
-    appoint_at "2017-09-24 14:39:08"
+    appoint_at "2016-10-24 14:39:08"
     meeting_room_id 1
-    # date 0
-    # state 0
+    sign "sign"
+    # session 0
     layout 0
     user_id 1
     is_projector true

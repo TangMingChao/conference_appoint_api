@@ -1,6 +1,6 @@
 require 'acceptance_helper'
 
-resource "电子会议室的资料" do
+resource "电子会议室的信息及使用情况" do
   header "Accept", "application/json"
 
 #  ####################用户查询会议室的列表####################
@@ -9,7 +9,7 @@ resource "电子会议室的资料" do
       create_list(:meeting_room, 5, max_number: 5)
     end
 
-    example "查询会议室的列表成功" do
+    example "首页查询会议室的列表成功" do
       do_request
       puts response_body
       expect(status).to eq(200)
@@ -25,7 +25,7 @@ resource "电子会议室的资料" do
 
     let(:id) {@meeting_rooms.first.id}
 
-    example "查询指定会议室的详情成功" do
+    example "首页查询指定会议室的详情成功" do
       do_request
       puts response_body
       expect(status).to eq(200)

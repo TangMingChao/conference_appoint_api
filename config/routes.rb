@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  resources :meeting_room_infos ,only: [:show,:index]
+  resources :homes ,only: [:index]
+  resources :meeting_room_orders ,only: [:show,:index]
   devise_for :administrators
+
   namespace :admin do
   	resources :orders ,only: [:show,:index] do
       member do
         post :accept
         post :refuse
       end
-
   	end
   end
+  
   resources :orders,only: [:create, :index, :show] 
   resources :meeting_rooms ,only: [:show,:index]
   devise_for :users
