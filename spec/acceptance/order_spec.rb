@@ -61,7 +61,7 @@ resource "预约电子会议室的订单" do
 
      before do
      @user = create(:user)
-     @orders = create_list(:order, 1, join_number: 3)
+     @orders = create_list(:order, 5, join_number: 3)
      end
 
     parameter :page, "当前页", require: false

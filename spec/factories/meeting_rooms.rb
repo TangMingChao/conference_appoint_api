@@ -16,6 +16,6 @@ FactoryGirl.define do
   factory :meeting_room do
     title "meetingroom title"
     description "meetingroom description"
-    max_number 4
+    max_number 160
   end
 end

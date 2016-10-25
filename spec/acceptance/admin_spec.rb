@@ -11,7 +11,7 @@ resource "管理员对预约订单的审核" do
     header "X-Administrator-Phone", administrator_attrs[:phone]
     before do
      @administrator = create(:administrator)
-     @orders = create_list(:order, 3, join_number: 4)
+     @orders = create_list(:order, 5, join_number: 50)
     end
 
     parameter :page, "当前页", require: false
@@ -38,7 +38,7 @@ resource "管理员对预约订单的审核" do
 
     before do
       @administrator = create(:administrator)
-      @orders = create_list(:order, 3, join_number: 4)
+      @orders = create_list(:order, 5, join_number: 50)
     end
 
   	let(:id) { @orders.first.id }
@@ -61,7 +61,7 @@ resource "管理员对预约订单的审核" do
     parameter :state, "预约订单的状态", require: true, scope: :order
     before do
       @administrator = create(:administrator)
-      @orders = create_list(:order, 3, join_number: 4)
+      @orders = create_list(:order, 5, join_number: 50)
     end
 
   	let(:id) { @orders.first.id } 
@@ -86,7 +86,7 @@ resource "管理员对预约订单的审核" do
     parameter :state, "预约订单的状态", require: true, scope: :order
     before do
       @administrator = create(:administrator)
-    @orders = create_list(:order, 3, join_number: 4)
+    @orders = create_list(:order, 5, join_number: 50)
     end
 
   	let(:id) { @orders.first.id }   

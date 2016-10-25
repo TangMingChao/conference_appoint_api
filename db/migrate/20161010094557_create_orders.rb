@@ -17,11 +17,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.references :meeting_room, foreign_key: true
       t.references :user, foreign_key: true
 
-      t.date :appoint_at
-      t.date :query_at 
-
-    
-
+      t.datetime :appoint_at
       t.timestamps
     end
   end

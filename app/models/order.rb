@@ -16,23 +16,12 @@
 #  is_projector     :boolean          default(TRUE)
 #  is_meeting_phone :boolean          default(TRUE)
 #  sign             :text
-#  appoint_at       :date
-#  query_at         :date
+#  appoint_at       :datetime
 #
-
- # meeting_room.state:{
- #  unused: 0 ,
- #  checking: 1 ,
- #  used: 2
- # }
 
 class Order < ApplicationRecord
   include AASM
   belongs_to :meeting_room ,foreign_key:"meeting_room_id"
-  
-  # belongs_to :user, foreign_key: :user_id
-  # belongs_to :admin, class_name: "User", foreign_key: :user_id
-
   ################validates#####################
   validates_presence_of :appoint_name, on: :create, message: " appoint_name不能为空"
   validates_presence_of :appoint_phone, on: :create, message: "appoint_phone不能为空"
@@ -53,7 +42,6 @@ class Order < ApplicationRecord
   # validates_uniqueness_of :meeting_room_id,scope: [:appoint_at,:session]
 
   ###################  Enum  ########################
-
   enum layout: {
 
         rectangle: 0,
@@ -91,32 +79,45 @@ class Order < ApplicationRecord
       transitions :from => [:checking], :to => :unused
     end
   end
-
- #  ############### update_state_order ############
-  # after_create :update_state_order_check
-
+   ############### update_state_order ############
   def update_state_order_check 
       self.check
-      # self.meeting_room.check
   end
 
   def update_state_order_accept 
       self.accept
-      # self.meeting_room.use
   end
   def update_state_order_refuse 
       self.refuse
-      # self.meeting_room.unuse
   end 
- ################## time_range ####################
-  # def time_range
-  #   # between_times(self.query_at - 2.day, self.query_at + 5.day)
-  #   if self.query_at.present?
-  #     ((self.query_at - 2.day) .. (self.query_at + 5.day))
-  #   else
-  #     ((Time.now.midnight) .. (Time.now.midnight + 6.day))
-  #   end
+  ############### where_order ##############
+  scope :orders_with_range, ->(range) { where(appoint_at:range) }
+  scope :meeting_room_orders, ->(id) {where(meeting_room_id:id)}
+  scope :session_morning, -> {where session: 0}
+  scope :session_afternoon, -> {where session: 1}
+  def self.meeting_room_range_orders
+    query_at = query_at || Time.now.midnight + 2.day
+    time_range = ((query_at - 2.day) .. (query_at + 5.day))
+    self.orders_with_range(time_range)
+  end
+
+
+
+  # def method_name (time,)
+      # @range_orders = @orders.meeting_room_orders(range)
+      # time = query_at - 2.day
+      # while time < (query_at + 5.day)
+      #   hash1 = Hash.new 
+      #   hash2 = Hash.new 
+      #   p time
+      #   p room_orders = @room_orders.orders_with_range(time)
+        
+      # end
   # end
+    
+    
+
+
 end
 
 

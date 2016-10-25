@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161018015100) do
+ActiveRecord::Schema.define(version: 20161025055242) do
 
   create_table "administrators", force: :cascade do |t|
     t.string   "email",                             default: "", null: false
@@ -85,8 +85,7 @@ ActiveRecord::Schema.define(version: 20161018015100) do
     t.boolean  "is_projector",     default: true
     t.boolean  "is_meeting_phone", default: true
     t.text     "sign"
-    t.date     "appoint_at"
-    t.date     "query_at"
+    t.datetime "appoint_at"
     t.index ["meeting_room_id"], name: "index_orders_on_meeting_room_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

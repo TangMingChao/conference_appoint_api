@@ -15,7 +15,6 @@
 class MeetingRoom < ApplicationRecord
   include AASM
   has_many :orders
-  # has_many :groups, class_name: "Order", dependent: :destroy
 	validates :title,:description,:max_number,presence: true
 	# validates :title,uniqueness:true
 
@@ -44,4 +43,15 @@ class MeetingRoom < ApplicationRecord
       transitions :from => [:checking,:used] , :to => :unused
     end
   end  
+  ############ meeting_room_state #################
+  def update_state_meeting_room_check 
+      self.meeting_room.check
+  end
+
+  def update_state_meeting_room_accept 
+      self.meeting_room.use
+  end
+  def update_state_meeting_room_refuse 
+      self.meeting_room.unuse
+  end
 end

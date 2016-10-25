@@ -16,8 +16,7 @@
 #  is_projector     :boolean          default(TRUE)
 #  is_meeting_phone :boolean          default(TRUE)
 #  sign             :text
-#  appoint_at       :date
-#  query_at         :date
+#  appoint_at       :datetime
 #
 
 #
@@ -26,9 +25,9 @@ FactoryGirl.define do
   factory :order do
     appoint_name "appoint_name"
     appoint_phone "appoint_phone"
-    join_number 1
-    appoint_at "2016-10-24 14:39:08"
-    meeting_room_id 1
+    join_number 50
+    appoint_at "2016-10-30 14:39:08"
+    meeting_room_id 2
     sign "sign"
     # session 0
     layout 0

@@ -1,25 +1,6 @@
 {
   "resources": [
     {
-      "name": "会议室的使用信息",
-      "examples": [
-        {
-          "description": "用户查询会议室一周的使用情况成功",
-          "link": "会议室的使用信息/用户查询会议室一周的使用情况成功.json",
-          "groups": "all",
-          "route": "/meeting_room_orders",
-          "method": "get"
-        },
-        {
-          "description": "用户查询指定会议室的使用详情成功",
-          "link": "会议室的使用信息/用户查询指定会议室的使用详情成功.json",
-          "groups": "all",
-          "route": "/meeting_room_orders/:id",
-          "method": "get"
-        }
-      ]
-    },
-    {
       "name": "用户登录",
       "examples": [
         {
@@ -32,18 +13,18 @@
       ]
     },
     {
-      "name": "电子会议室的信息及使用情况",
+      "name": "电子会议室的信息",
       "examples": [
         {
-          "description": "首页查询会议室的列表成功",
-          "link": "电子会议室的信息及使用情况/首页查询会议室的列表成功.json",
+          "description": "首页查询会议室的列表及使用情况成功",
+          "link": "电子会议室的信息/首页查询会议室的列表及使用情况成功.json",
           "groups": "all",
           "route": "/meeting_rooms",
           "method": "get"
         },
         {
           "description": "首页查询指定会议室的详情成功",
-          "link": "电子会议室的信息及使用情况/首页查询指定会议室的详情成功.json",
+          "link": "电子会议室的信息/首页查询指定会议室的详情成功.json",
           "groups": "all",
           "route": "meeting_rooms/:id",
           "method": "get"
