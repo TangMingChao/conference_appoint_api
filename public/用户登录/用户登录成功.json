@@ -1,0 +1,77 @@
+{
+  "resource": "用户登录",
+  "http_method": "POST",
+  "route": "/users/sign_in",
+  "description": "用户登录成功",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "user",
+      "name": "email",
+      "description": "登录的邮箱号"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password",
+      "description": "登录密码"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "id",
+      "description": "用户ID"
+    },
+    {
+      "name": "email",
+      "description": "邮箱"
+    },
+    {
+      "name": "authentication_token",
+      "description": "鉴权Token"
+    },
+    {
+      "name": "created_at",
+      "description": "创建时间"
+    },
+    {
+      "name": "updated_at",
+      "description": "更新时间"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users/sign_in",
+      "request_body": "user[email]=13813813811%40163.com&user[password]=abcd1234",
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 1,\n  \"authentication_token\": \"qwertyuiop2\",\n  \"email\": \"13813813811@163.com\",\n  \"created_at\": \"2016-10-26T09:33:32.992+08:00\",\n  \"updated_at\": \"2016-10-26T09:33:33.016+08:00\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "/",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"26d58d475fa5eca2e2803956f7547462\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b4433dae-1f67-4b59-8474-34e62bc8547b",
+        "X-Runtime": "0.036390",
+        "Vary": "Origin",
+        "Content-Length": "165"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//users/sign_in\" -d 'user[email]=13813813811%40163.com&user[password]=abcd1234' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

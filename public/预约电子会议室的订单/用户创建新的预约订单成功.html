@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>预约电子会议室的订单 API</title>
+    <meta charset="utf-8">
+    <style>
+      
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+}
+
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 18px;
+  line-height: 18px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+td.required .name:after {
+  float: right;
+  content: "required";
+  font-weight: normal;
+  color: #F08080;
+}
+
+a{
+  color: #0069d6;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #404040;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h3{
+  font-size: 18px;
+  line-height: 36px;
+}
+h4 {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+table{
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  font-size: 13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+table th+th, table td+td {
+  border-left: 1px solid #ddd;
+}
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>预约电子会议室的订单 API</h1>
+
+      <div class="article">
+        <h2>用户创建新的预约订单成功</h2>
+        <h3>POST /orders</h3>
+
+          <h3>Parameters</h3>
+          <table class="parameters table table-striped table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <span class="name">order[appoint_name]</span>
+                </td>
+                <td>
+                  <span class="description">预约人姓名</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[appoint_phone]</span>
+                </td>
+                <td>
+                  <span class="description">预约人联系电话</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[join_number]</span>
+                </td>
+                <td>
+                  <span class="description">参加会议的人数</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[appoint_at]</span>
+                </td>
+                <td>
+                  <span class="description">预约会议日期</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[session]</span>
+                </td>
+                <td>
+                  <span class="description">会议室开放时间</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[state]</span>
+                </td>
+                <td>
+                  <span class="description">预约订单的状态</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[room_layout]</span>
+                </td>
+                <td>
+                  <span class="description">预约会议室的布局</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[is_projector]</span>
+                </td>
+                <td>
+                  <span class="description">预约是否需要投影仪</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[is_meeting_phone]</span>
+                </td>
+                <td>
+                  <span class="description">预约是否需要会议电话</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[meeting_room_id]</span>
+                </td>
+                <td>
+                  <span class="description">预约的会议室</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">order[sign]</span>
+                </td>
+                <td>
+                  <span class="description">预约的会议室</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <h3>Request</h3>
+
+            <h4>Headers</h4>
+            <pre class="request headers">Accept: application/json
+X-User-Token: qwertyuiop2
+X-User-Email: 13813813811@163.com
+Host: example.org
+Content-Type: application/x-www-form-urlencoded
+Cookie: </pre>
+
+          <h4>Route</h4>
+          <pre class="request route highlight">POST /orders</pre>
+
+
+            <h4>Body</h4>
+            <pre class="request body">order[appoint_name]=appoint_name&order[appoint_phone]=appoint_phone&order[join_number]=50&order[appoint_at]=2016-10-30+14%3A39%3A08&order[session]&order[state]&order[room_layout]&order[is_projector]=true&order[is_meeting_phone]=true&order[meeting_room_id]=2&order[sign]=sign</pre>
+
+            <h4>cURL</h4>
+            <pre class="request curl">curl &quot;http://smart-life.com//orders&quot; -d &#39;order[appoint_name]=appoint_name&amp;order[appoint_phone]=appoint_phone&amp;order[join_number]=50&amp;order[appoint_at]=2016-10-30+14%3A39%3A08&amp;order[session]&amp;order[state]&amp;order[room_layout]&amp;order[is_projector]=true&amp;order[is_meeting_phone]=true&amp;order[meeting_room_id]=2&amp;order[sign]=sign&#39; -X POST \
+	-H &quot;Accept: application/json&quot; \
+	-H &quot;X-User-Token: qwertyuiop2&quot; \
+	-H &quot;X-User-Email: 13813813811@163.com&quot; \
+	-H &quot;Host: example.org&quot; \
+	-H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+	-H &quot;Cookie: &quot;</pre>
+
+            <h3>Response</h3>
+              <h4>Headers</h4>
+              <pre class="response headers">X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;00c6133e96afabe92272de3112e0193f&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 51e88888-92e8-453f-96f7-7203da724eb0
+X-Runtime: 0.020252
+Vary: Origin
+Content-Length: 363</pre>
+            <h4>Status</h4>
+            <pre class="response status">201 Created</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;id&quot;: 1,
+  &quot;appoint_name&quot;: &quot;appoint_name&quot;,
+  &quot;appoint_phone&quot;: &quot;appoint_phone&quot;,
+  &quot;join_number&quot;: 50,
+  &quot;appoint_at&quot;: &quot;2016-10-30&quot;,
+  &quot;session&quot;: null,
+  &quot;state&quot;: &quot;checking&quot;,
+  &quot;layout&quot;: &quot;rectangle&quot;,
+  &quot;meeting_room_id&quot;: 2,
+  &quot;is_projector&quot;: true,
+  &quot;is_meeting_phone&quot;: true,
+  &quot;created_at&quot;: &quot;2016-10-26T09:33:33.205+08:00&quot;,
+  &quot;updated_at&quot;: &quot;2016-10-26T09:33:33.205+08:00&quot;,
+  &quot;url&quot;: &quot;http://example.org/orders/1.json&quot;
+}</pre>
+      </div>
+    </div>
+  </body>
+</html>

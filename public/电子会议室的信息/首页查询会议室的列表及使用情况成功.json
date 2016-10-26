@@ -1,0 +1,45 @@
+{
+  "resource": "电子会议室的信息",
+  "http_method": "GET",
+  "route": "/meeting_rooms",
+  "description": "首页查询会议室的列表及使用情况成功",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/meeting_rooms",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"current_page\": 1,\n  \"total_pages\": 1,\n  \"meeting_rooms\": [\n    {\n      \"id\": 1,\n      \"title\": \"meetingroom title\",\n      \"description\": \"meetingroom description\",\n      \"max_number\": 250,\n      \"photo\": null,\n      \"meeting_room_orders\": [\n\n      ]\n    },\n    {\n      \"id\": 2,\n      \"title\": \"meetingroom title\",\n      \"description\": \"meetingroom description\",\n      \"max_number\": 250,\n      \"photo\": null,\n      \"meeting_room_orders\": [\n        {\n          \"id\": 1,\n          \"appoint_at\": \"2016-10-30\",\n          \"meeting_room_id\": 2,\n          \"session\": \"morning\",\n          \"state\": \"checking\",\n          \"appoint_name\": \"appoint_name\",\n          \"appoint_phone\": \"appoint_phone\",\n          \"created_at\": \"2016-10-26T09:33:33.096+08:00\",\n          \"updated_at\": \"2016-10-26T09:33:33.096+08:00\",\n          \"url\": \"http://example.org/meeting_room_orders/1.json\"\n        },\n        {\n          \"id\": 2,\n          \"appoint_at\": \"2016-10-30\",\n          \"meeting_room_id\": 2,\n          \"session\": \"morning\",\n          \"state\": \"checking\",\n          \"appoint_name\": \"appoint_name\",\n          \"appoint_phone\": \"appoint_phone\",\n          \"created_at\": \"2016-10-26T09:33:33.100+08:00\",\n          \"updated_at\": \"2016-10-26T09:33:33.100+08:00\",\n          \"url\": \"http://example.org/meeting_room_orders/2.json\"\n        },\n        {\n          \"id\": 3,\n          \"appoint_at\": \"2016-10-30\",\n          \"meeting_room_id\": 2,\n          \"session\": \"morning\",\n          \"state\": \"checking\",\n          \"appoint_name\": \"appoint_name\",\n          \"appoint_phone\": \"appoint_phone\",\n          \"created_at\": \"2016-10-26T09:33:33.103+08:00\",\n          \"updated_at\": \"2016-10-26T09:33:33.103+08:00\",\n          \"url\": \"http://example.org/meeting_room_orders/3.json\"\n        },\n        {\n          \"id\": 4,\n          \"appoint_at\": \"2016-10-30\",\n          \"meeting_room_id\": 2,\n          \"session\": \"morning\",\n          \"state\": \"checking\",\n          \"appoint_name\": \"appoint_name\",\n          \"appoint_phone\": \"appoint_phone\",\n          \"created_at\": \"2016-10-26T09:33:33.107+08:00\",\n          \"updated_at\": \"2016-10-26T09:33:33.107+08:00\",\n          \"url\": \"http://example.org/meeting_room_orders/4.json\"\n        },\n        {\n          \"id\": 5,\n          \"appoint_at\": \"2016-10-30\",\n          \"meeting_room_id\": 2,\n          \"session\": \"morning\",\n          \"state\": \"checking\",\n          \"appoint_name\": \"appoint_name\",\n          \"appoint_phone\": \"appoint_phone\",\n          \"created_at\": \"2016-10-26T09:33:33.110+08:00\",\n          \"updated_at\": \"2016-10-26T09:33:33.110+08:00\",\n          \"url\": \"http://example.org/meeting_room_orders/5.json\"\n        }\n      ]\n    },\n    {\n      \"id\": 3,\n      \"title\": \"meetingroom title\",\n      \"description\": \"meetingroom description\",\n      \"max_number\": 250,\n      \"photo\": null,\n      \"meeting_room_orders\": [\n\n      ]\n    },\n    {\n      \"id\": 4,\n      \"title\": \"meetingroom title\",\n      \"description\": \"meetingroom description\",\n      \"max_number\": 250,\n      \"photo\": null,\n      \"meeting_room_orders\": [\n\n      ]\n    },\n    {\n      \"id\": 5,\n      \"title\": \"meetingroom title\",\n      \"description\": \"meetingroom description\",\n      \"max_number\": 250,\n      \"photo\": null,\n      \"meeting_room_orders\": [\n\n      ]\n    },\n    {\n      \"id\": 6,\n      \"title\": \"meetingroom title\",\n      \"description\": \"meetingroom description\",\n      \"max_number\": 250,\n      \"photo\": null,\n      \"meeting_room_orders\": [\n\n      ]\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e88e789cb49f6065c64be6914e50a0b8\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e173dbb7-a342-428e-896d-aa3ef6128fd0",
+        "X-Runtime": "0.042754",
+        "Vary": "Origin",
+        "Content-Length": "2343"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//meeting_rooms\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

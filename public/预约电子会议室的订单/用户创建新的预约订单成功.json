@@ -1,0 +1,113 @@
+{
+  "resource": "预约电子会议室的订单",
+  "http_method": "POST",
+  "route": "/orders",
+  "description": "用户创建新的预约订单成功",
+  "explanation": null,
+  "parameters": [
+    {
+      "require": true,
+      "scope": "order",
+      "name": "appoint_name",
+      "description": "预约人姓名"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "appoint_phone",
+      "description": "预约人联系电话"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "join_number",
+      "description": "参加会议的人数"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "appoint_at",
+      "description": "预约会议日期"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "session",
+      "description": "会议室开放时间"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "state",
+      "description": "预约订单的状态"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "room_layout",
+      "description": "预约会议室的布局"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "is_projector",
+      "description": "预约是否需要投影仪"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "is_meeting_phone",
+      "description": "预约是否需要会议电话"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "meeting_room_id",
+      "description": "预约的会议室"
+    },
+    {
+      "require": true,
+      "scope": "order",
+      "name": "sign",
+      "description": "预约的会议室"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/orders",
+      "request_body": "order[appoint_name]=appoint_name&order[appoint_phone]=appoint_phone&order[join_number]=50&order[appoint_at]=2016-10-30+14%3A39%3A08&order[session]&order[state]&order[room_layout]&order[is_projector]=true&order[is_meeting_phone]=true&order[meeting_room_id]=2&order[sign]=sign",
+      "request_headers": {
+        "Accept": "application/json",
+        "X-User-Token": "qwertyuiop2",
+        "X-User-Email": "13813813811@163.com",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 1,\n  \"appoint_name\": \"appoint_name\",\n  \"appoint_phone\": \"appoint_phone\",\n  \"join_number\": 50,\n  \"appoint_at\": \"2016-10-30\",\n  \"session\": null,\n  \"state\": \"checking\",\n  \"layout\": \"rectangle\",\n  \"meeting_room_id\": 2,\n  \"is_projector\": true,\n  \"is_meeting_phone\": true,\n  \"created_at\": \"2016-10-26T09:33:33.205+08:00\",\n  \"updated_at\": \"2016-10-26T09:33:33.205+08:00\",\n  \"url\": \"http://example.org/orders/1.json\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"00c6133e96afabe92272de3112e0193f\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "51e88888-92e8-453f-96f7-7203da724eb0",
+        "X-Runtime": "0.020252",
+        "Vary": "Origin",
+        "Content-Length": "363"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://smart-life.com//orders\" -d 'order[appoint_name]=appoint_name&order[appoint_phone]=appoint_phone&order[join_number]=50&order[appoint_at]=2016-10-30+14%3A39%3A08&order[session]&order[state]&order[room_layout]&order[is_projector]=true&order[is_meeting_phone]=true&order[meeting_room_id]=2&order[sign]=sign' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Token: qwertyuiop2\" \\\n\t-H \"X-User-Email: 13813813811@163.com\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
