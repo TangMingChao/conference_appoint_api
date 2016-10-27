@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025055242) do
+ActiveRecord::Schema.define(version: 20161027103904) do
 
   create_table "administrators", force: :cascade do |t|
     t.string   "email",                             default: "", null: false
@@ -64,11 +64,10 @@ ActiveRecord::Schema.define(version: 20161025055242) do
   create_table "meeting_rooms", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "max_number"
     t.string   "photo"
-    t.integer  "state",       default: 0
   end
 
   create_table "orders", force: :cascade do |t|
@@ -85,7 +84,7 @@ ActiveRecord::Schema.define(version: 20161025055242) do
     t.boolean  "is_projector",     default: true
     t.boolean  "is_meeting_phone", default: true
     t.text     "sign"
-    t.datetime "appoint_at"
+    t.date     "appoint_at"
     t.index ["meeting_room_id"], name: "index_orders_on_meeting_room_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

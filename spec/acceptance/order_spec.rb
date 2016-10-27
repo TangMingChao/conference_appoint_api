@@ -40,10 +40,7 @@ resource "预约电子会议室的订单" do
     	let(:is_meeting_phone) {order_attrs[:is_meeting_phone]}
     	let(:meeting_room_id) {order_attrs[:meeting_room_id]}
       let(:sign) {order_attrs[:sign]}
-
-
     ################################# 
- 
   	example "用户创建新的预约订单成功" do
   		do_request
   		puts response_body

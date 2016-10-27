@@ -1,6 +1,18 @@
 {
   "resources": [
     {
+      "name": "会议室的使用信息",
+      "examples": [
+        {
+          "description": "用户查询会议室一周的使用情况成功",
+          "link": "会议室的使用信息/用户查询会议室一周的使用情况成功.json",
+          "groups": "all",
+          "route": "/meeting_room_orders",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "用户登录",
       "examples": [
         {

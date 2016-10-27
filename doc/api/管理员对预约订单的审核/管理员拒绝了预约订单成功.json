@@ -33,19 +33,19 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 1,\n  \"appoint_name\": \"appoint_name\",\n  \"appoint_phone\": \"appoint_phone\",\n  \"join_number\": 50,\n  \"session\": \"morning\",\n  \"state\": \"unused\",\n  \"meeting_room_id\": 2,\n  \"created_at\": \"2016-10-27T18:26:05.448+08:00\",\n  \"updated_at\": \"2016-10-27T18:26:05.448+08:00\",\n  \"layout\": \"rectangle\",\n  \"user_id\": 1,\n  \"is_projector\": true,\n  \"is_meeting_phone\": true,\n  \"sign\": \"sign\",\n  \"appoint_at\": \"2016-10-30\",\n  \"query_at\": null\n}",
+      "response_body": "{\n  \"id\": 1,\n  \"appoint_name\": \"appoint_name\",\n  \"appoint_phone\": \"appoint_phone\",\n  \"join_number\": 50,\n  \"session\": \"morning\",\n  \"state\": \"unused\",\n  \"meeting_room_id\": 2,\n  \"created_at\": \"2016-10-27T18:52:28.121+08:00\",\n  \"updated_at\": \"2016-10-27T18:52:28.121+08:00\",\n  \"layout\": \"rectangle\",\n  \"user_id\": 1,\n  \"is_projector\": true,\n  \"is_meeting_phone\": true,\n  \"sign\": \"sign\",\n  \"appoint_at\": \"2016-10-30\"\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Location": "http://example.org/orders/1",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"ecfa470916da13c1bfcc6f55d544befc\"",
+        "ETag": "W/\"9ca05c3613cc95d121dae3f893c54c53\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "27d89cce-e362-4477-be36-d0adff670bfe",
-        "X-Runtime": "0.007997",
+        "X-Request-Id": "7b6f1a97-8363-476f-bc7b-1bf264ddb415",
+        "X-Runtime": "0.010185",
         "Vary": "Origin",
-        "Content-Length": "367"
+        "Content-Length": "351"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": "curl \"http://smart-life.com//admin/orders/1/refuse\" -d 'order[state]=0' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Administrator-Token: qwertyuiop2\" \\\n\t-H \"X-Administrator-Phone: 13813813811\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""

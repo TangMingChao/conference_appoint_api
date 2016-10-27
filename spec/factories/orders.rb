@@ -16,7 +16,7 @@
 #  is_projector     :boolean          default(TRUE)
 #  is_meeting_phone :boolean          default(TRUE)
 #  sign             :text
-#  appoint_at       :datetime
+#  appoint_at       :date
 #
 
 #

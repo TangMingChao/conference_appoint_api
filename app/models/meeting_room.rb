@@ -9,7 +9,6 @@
 #  updated_at  :datetime         not null
 #  max_number  :integer
 #  photo       :string
-#  state       :integer          default("unused")
 #
 
 class MeetingRoom < ApplicationRecord

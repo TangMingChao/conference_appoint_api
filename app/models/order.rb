@@ -16,7 +16,7 @@
 #  is_projector     :boolean          default(TRUE)
 #  is_meeting_phone :boolean          default(TRUE)
 #  sign             :text
-#  appoint_at       :datetime
+#  appoint_at       :date
 #
 
 class Order < ApplicationRecord
@@ -93,7 +93,7 @@ class Order < ApplicationRecord
    ############### where_order ##############
   scope :orders_with_range, ->(range) { where(appoint_at:range) }
   scope :meeting_room_orders, ->(id) {where(meeting_room_id:id)}
-   #################### where_range_orders ##################
+   #################### where_range_orders_in_meeting_room_jbuilder ##################
   def self.meeting_room_range_orders
     query_at = query_at || Time.now.midnight + 2.day
     time_range = ((query_at - 2.day) .. (query_at + 5.day))

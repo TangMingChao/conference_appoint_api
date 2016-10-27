@@ -5,7 +5,6 @@ class CreateMeetingRooms < ActiveRecord::Migration[5.0]
       t.text :description
       t.integer :max_number
       t.string :photo
-      t.integer :state,default:0
       
       t.timestamps
     end
