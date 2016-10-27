@@ -23,7 +23,7 @@
 # Ignore folder & files by project
 /doc/*
 /public/system/*
-#/public/*
+/public/*
 /solr/
 /vendor/*
 #/config/database.yml
