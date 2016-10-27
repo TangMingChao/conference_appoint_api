@@ -90,34 +90,15 @@ class Order < ApplicationRecord
   def update_state_order_refuse 
       self.refuse
   end 
-  ############### where_order ##############
+   ############### where_order ##############
   scope :orders_with_range, ->(range) { where(appoint_at:range) }
   scope :meeting_room_orders, ->(id) {where(meeting_room_id:id)}
-  scope :session_morning, -> {where session: 0}
-  scope :session_afternoon, -> {where session: 1}
+   #################### where_range_orders ##################
   def self.meeting_room_range_orders
     query_at = query_at || Time.now.midnight + 2.day
     time_range = ((query_at - 2.day) .. (query_at + 5.day))
     self.orders_with_range(time_range)
   end
-
-
-
-  # def method_name (time,)
-      # @range_orders = @orders.meeting_room_orders(range)
-      # time = query_at - 2.day
-      # while time < (query_at + 5.day)
-      #   hash1 = Hash.new 
-      #   hash2 = Hash.new 
-      #   p time
-      #   p room_orders = @room_orders.orders_with_range(time)
-        
-      # end
-  # end
-    
-    
-
-
 end
 
 
