@@ -26,4 +26,4 @@
 /public/*
 /solr/
 /vendor/*
-#/config/database.yml
+/config/database.yml
