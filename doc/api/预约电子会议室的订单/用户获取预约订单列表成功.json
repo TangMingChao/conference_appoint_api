@@ -26,8 +26,6 @@
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "X-User-Token": "qwertyuiop2",
-        "X-User-Email": "13813813811@163.com",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -38,21 +36,21 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"current_page\": 1,\n  \"total_pages\": 2,\n  \"orders\": [\n    {\n      \"id\": 1,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-25T22:11:42.497+08:00\",\n      \"updated_at\": \"2016-10-25T22:11:42.497+08:00\",\n      \"url\": \"http://example.org/orders/1.json\"\n    },\n    {\n      \"id\": 2,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-25T22:11:42.501+08:00\",\n      \"updated_at\": \"2016-10-25T22:11:42.501+08:00\",\n      \"url\": \"http://example.org/orders/2.json\"\n    },\n    {\n      \"id\": 3,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-25T22:11:42.504+08:00\",\n      \"updated_at\": \"2016-10-25T22:11:42.504+08:00\",\n      \"url\": \"http://example.org/orders/3.json\"\n    },\n    {\n      \"id\": 4,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-25T22:11:42.507+08:00\",\n      \"updated_at\": \"2016-10-25T22:11:42.507+08:00\",\n      \"url\": \"http://example.org/orders/4.json\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"current_page\": 1,\n  \"total_pages\": 2,\n  \"orders\": [\n    {\n      \"id\": 1,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-27T18:26:05.770+08:00\",\n      \"updated_at\": \"2016-10-27T18:26:05.770+08:00\",\n      \"url\": \"http://example.org/orders/1.json\"\n    },\n    {\n      \"id\": 2,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-27T18:26:05.774+08:00\",\n      \"updated_at\": \"2016-10-27T18:26:05.774+08:00\",\n      \"url\": \"http://example.org/orders/2.json\"\n    },\n    {\n      \"id\": 3,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-27T18:26:05.777+08:00\",\n      \"updated_at\": \"2016-10-27T18:26:05.777+08:00\",\n      \"url\": \"http://example.org/orders/3.json\"\n    },\n    {\n      \"id\": 4,\n      \"appoint_name\": \"appoint_name\",\n      \"appoint_phone\": \"appoint_phone\",\n      \"join_number\": 3,\n      \"appoint_at\": \"2016-10-30\",\n      \"session\": \"morning\",\n      \"state\": \"checking\",\n      \"layout\": \"rectangle\",\n      \"meeting_room_id\": 2,\n      \"is_projector\": true,\n      \"is_meeting_phone\": true,\n      \"created_at\": \"2016-10-27T18:26:05.781+08:00\",\n      \"updated_at\": \"2016-10-27T18:26:05.781+08:00\",\n      \"url\": \"http://example.org/orders/4.json\"\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"f925d82440cb975edb6bef8bbf6d3da5\"",
+        "ETag": "W/\"a643ecbf284c0ef7bc7a31a0b5e16dd0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "721e427d-5751-4bfb-b125-2c5432c5aa2e",
-        "X-Runtime": "0.017314",
+        "X-Request-Id": "bb5bf5c3-b69f-4caa-9b7a-6201bd4436c9",
+        "X-Runtime": "0.013615",
         "Vary": "Origin",
         "Content-Length": "1517"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://smart-life.com//orders?page=1&per_page=4\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-User-Token: qwertyuiop2\" \\\n\t-H \"X-User-Email: 13813813811@163.com\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://smart-life.com//orders?page=1&per_page=4\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

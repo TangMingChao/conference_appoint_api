@@ -5,33 +5,19 @@ resource "会议室的使用信息" do
 
   get "/meeting_room_orders" do
     before do
-     @meeting_rooms = create_list(:meeting_room, 2, max_number: 1)
-     create_list(:order, 5, join_number: 40)
+      @meeting_rooms = create_list(:meeting_room, 6, max_number: 5)
+      create(:order, meeting_room_id: @meeting_rooms.first.id, session: 0, appoint_at: Time.zone.today + 1.day)
+      sucess_order = create(:order, meeting_room_id: @meeting_rooms.last.id, session: 1, state: 0, appoint_at: Time.zone.today + 2.day)
+      sucess_order.accept!
+      refuse_order = create(:order, meeting_room_id: @meeting_rooms.last.id, session: 0, state: 0, appoint_at: Time.zone.today + 2.day)
+      refuse_order.refuse!
     end
-    # let(:meeting_room_id){ @meeting_room.id }
 
-  	example "用户查询会议室一周的使用情况成功" do
-  		do_request
+    example "用户查询会议室一周的使用情况成功" do
+      do_request
        puts response_body
        expect(status).to eq(200)
-  	end
-  	
-  end
-
-
-  get "/meeting_room_orders/:id" do
-
-    before do
-      @orders = create_list(:order, 5, join_number: 40)
     end
-
-  	let(:id) { @orders.first.id }
-
-  	example "用户查询指定会议室的使用详情成功" do
-  		do_request
-
-  		puts response_body
-      expect(status).to eq(200)
-  	end
+    
   end
 end

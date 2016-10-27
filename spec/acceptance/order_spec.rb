@@ -5,15 +5,15 @@ resource "预约电子会议室的订单" do
 
   post "/orders" do
     
-    user_attrs = FactoryGirl.attributes_for(:user)
+    # user_attrs = FactoryGirl.attributes_for(:user)
     order_attrs = FactoryGirl.attributes_for(:order)
 
-    header "X-User-Token", user_attrs[:authentication_token]
-    header "X-User-Email", user_attrs[:email]
+    # header "X-User-Token", user_attrs[:authentication_token]
+    # header "X-User-Email", user_attrs[:email]
 
-    before do
-      @user = create(:user)
-    end
+    # before do
+    #   @user = create(:user)
+    # end
       
       ########################## ssss
       parameter :appoint_name, "预约人姓名", require: true, scope: :order
@@ -54,13 +54,13 @@ resource "预约电子会议室的订单" do
 
   get "/orders" do
 
-  	user_attrs = FactoryGirl.attributes_for(:user)
+  	# user_attrs = FactoryGirl.attributes_for(:user)
 
-    header "X-User-Token", user_attrs[:authentication_token]
-    header "X-User-Email", user_attrs[:email]
+   #  header "X-User-Token", user_attrs[:authentication_token]
+   #  header "X-User-Email", user_attrs[:email]
 
      before do
-     @user = create(:user)
+     # @user = create(:user)
      @orders = create_list(:order, 5, join_number: 3)
      end
 
@@ -72,23 +72,21 @@ resource "预约电子会议室的订单" do
 
   	example "用户获取预约订单列表成功" do
   		do_request
-
   		puts response_body
-         expect(status).to eq(200)
-  	end
-  	
+      expect(status).to eq(200)
+  	end	
   end
   
 
   get "/orders/:id" do
 
-  	user_attrs = FactoryGirl.attributes_for(:user)
+  	# user_attrs = FactoryGirl.attributes_for(:user)
 
-    header "X-User-Token", user_attrs[:authentication_token]
-    header "X-User-Email", user_attrs[:email]
+   #  header "X-User-Token", user_attrs[:authentication_token]
+   #  header "X-User-Email", user_attrs[:email]
 
     before do
-      @user = create(:user)
+      # @user = create(:user)
       @orders = create_list(:order,5 , join_number: 3)
     end
 
@@ -101,6 +99,4 @@ resource "预约电子会议室的订单" do
         expect(status).to eq(200)
   	end
   end
-  
-
 end

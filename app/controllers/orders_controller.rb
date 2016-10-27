@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   include ActionView::Layouts
   include ActionController::MimeResponds
 
-  acts_as_token_authentication_handler_for User#, except: [:check, :reset] 
+  # acts_as_token_authentication_handler_for User
   before_action :set_order, only: [:show]
   respond_to :json
  
@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
   def index
     page = params[:page] || 1
     per_page = params[:per_page] || 10
-    @orders = current_user.orders.paginate(page: page, per_page: per_page)
+    @orders = Order.all.paginate(page: page, per_page: per_page)
     respond_with(@orders)
   end
 
@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
   # def edit
   # end
   def create
-    @order = current_user.orders.build(order_params)
+    @order = Order.new(order_params)
     @order.save
     respond_with @order,template: "orders/show",status:201
   end
@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
 
   private
     def set_order
-      @order = current_user.orders.find(params[:id])
+      @order = Order.find(params[:id])
     end
 
     def order_params
